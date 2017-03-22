@@ -1,0 +1,51 @@
+set shell=/bin/bash
+
+" set background=dark
+set backupdir=$HOME/.vimbackup//
+set directory=$HOME/.vimswap//
+set viewdir=$HOME/.vimviews//
+
+"color solarized
+
+silent execute '!mkdir -p $HOME/.vimbackup'
+silent execute '!mkdir -p $HOME/.vimswap'
+silent execute '!mkdir -p $HOME/.vimviews'
+
+let mapleader = "<Space>"
+set encoding=utf-8
+syntax on
+" inoremap <S-Space> <Esc>
+inoremap jk <Esc>l
+" inoremap - ` " a nice idea . . .
+
+" highlight comment ctermfg=lightblue
+" highlight Directory ctermfg=lightblue
+" highlight SpecialKey ctermfg=lightblue
+
+set ls=2
+set showcmd
+set nostartofline
+" set ignorecase " must set for smartcase to work
+" set smartcase "during searches, only do case sensitive if search string contains a capital letter
+	      "override this setting by adding \C to the search string to make it sensitive and \c to make it
+	      "case insensitive
+" try to keep windows from growing too much
+" let &winheight = &lines * 5 / 10
+
+set nowrap
+set hidden
+set autoread
+set ruler
+set confirm
+" set wildmode=list:longest,full
+" set wildmode=longest:full,full
+set wildmode=longest,list,full
+set wildmenu
+set foldlevel=1
+set incsearch
+set more
+set cindent
+
+nmap <Space>n :bn <ENTER>
+nmap <Space>p :bp <ENTER>
+nmap <Space>d :bd <ENTER>
